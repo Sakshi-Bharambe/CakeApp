@@ -30,7 +30,7 @@ const Register = () => {
              
         console.log(userName,password,email,address)
         try {
-            const response = await axios.post('http://192.168.231.136:5000/register', {
+            const response = await axios.post('http://IP:Port/register', {
                 userName,
                 password,
                  address,
