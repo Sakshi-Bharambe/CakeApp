@@ -17,7 +17,7 @@ const Product = () => {
     const handleLogout = async () => {
         try {
             // Make an HTTP GET request to the logout endpoint
-            const response = await axios.get('http://192.168.1.4:5000/logout');
+            const response = await axios.get('http://IP:Port/logout');
             // If logout is successful, navigate the user to the login screen or do any other necessary actions
             navigation.navigate('Login'); // Example: Navigate to the Login screen
         } catch (error) {
@@ -41,7 +41,7 @@ const Product = () => {
                     onPress: () => {
                         setProductName(productName);
                         // Make an API call to the server to buy the product
-                        axios.post('http://192.168.1.4:5000/buy', { userName, productName })
+                        axios.post('http://IP:Port/buy', { userName, productName })
                             .then(response => {
                                 console.log('Product purchased:', response.data);
                                 // Navigate to the "Bill" screen
